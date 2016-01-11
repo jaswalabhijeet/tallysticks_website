@@ -4,7 +4,7 @@
 
   bappHost = "bapp.ab.mkvd.net";
 
-  mailHost = "mail_tally.ab.mkvd.net";
+  mailHost = document.location.hostname === "localhost" ? "localhost:3001" : "mail_tally.ab.mkvd.net";
 
   contractName = 'contact_form';
 

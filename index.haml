@@ -99,13 +99,16 @@
               %input#LNAME{name: "last", placeholder: "Last", size: "30", type: "text", value: ""}/
               %input#EMAIL{name: "email", placeholder: "Email", required: true, size: "30", type: "text", value: ""}/
               %textarea#MESSAGE{name: "message", placeholder: "Message"}
-              %input#submit{type: "submit", value: "Send"}/
-          #success
-            %span.green.textcenter
-              %p Your message was sent successfully!
-          #error
-            %span
-              %p Something went wrong, try refreshing and submitting the form again.
+            .submit
+              %input{type: "submit", value: "Send"}/
+              .spinner
+                .rect1
+                .rect2
+                .rect3
+                .rect4
+                .rect5
+              .clear
+              .message.f-left
         / END COL 1
       / END WRAP
 

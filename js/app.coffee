@@ -1,6 +1,9 @@
 # configs
 bappHost     = "bapp.ab.mkvd.net"
-mailHost     = "mail_tally.ab.mkvd.net" # mail_tally.ab4.northeurope.cloudapp.azure.com
+mailHost = if document.location.hostname == "localhost"
+  "localhost:3001"
+else
+  "mail_tally.ab.mkvd.net" # mail_tally.ab4.northeurope.cloudapp.azure.com
 
 contractName = 'contact_form'
 
