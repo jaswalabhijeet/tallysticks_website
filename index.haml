@@ -1,0 +1,301 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %title Tallysticks
+    %meta{content: "Invoice Reconciliation on Blockchain", name: "description"}/
+    %meta{content: "SitePoint", name: "author"}/
+    %link{href: "styles.css?v=1.0", rel: "stylesheet"}/
+    %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", rel: "stylesheet"}/
+    %link{href: "fancybox/jquery.fancybox.css", rel: "stylesheet"}/
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %script{src: "fancybox/jquery.fancybox.pack.js"}
+    %script{src: "js/vendor/jquery.flip.min.js"}
+    %link{href: "https://fonts.googleapis.com/css?family=Lato:400,700", rel: "stylesheet", type: "text/css"}/
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
+  %body#top
+    %header
+      .wrap.cf
+        %a{href: "index.html"}
+          %img.site-logo{src: "assets/logo.png"}/
+        %nav
+          %ul
+            / <li class="home"><a href="#top">Home</a></li>
+            / <li class="api-coming-soon"><a href="#">API Coming Soon</a></li>
+    %section.main-hero
+      .text-wrap
+        MAKING BUSINESS EASIER
+    %section.four-boxes
+      .wrap.cf
+        %h2 SOLVING INVOICING CHALLENGES
+        %ul
+          %li
+            %span SEAMLESSLY ISSUE AND RECONCILE INVOICES IN REAL-TIME
+          %li
+            %span QUICKLY AND EASILY SCHEDULE PAYMENTS AT YOUR CONVENIENCE
+          %li
+            %span GET A REAL-TIME VIEW OF CASH FLOWS AND RAPIDLY IDENTIFY POTENTIAL RISKS
+          %li
+            %span INTEGRATES WITH EXISTING ERP PLATFORMS
+    %section.discover-more
+      .wrap
+        .banner
+          What is Tallysticks?
+          %span
+            %ul
+              %li A secure and private cost-effective Blockchain-based software solution that facilitates invoice payments and automates invoice reconciliation in a timely manner which ultimately increases profitability.
+              %br/
+              %li An immutable recordkeeping framework that establishes a trusted practice, amongst transaction participants as well as permissioned third-parties, for recording when, how and if invoice issuances, payments and reconciliations were performed.
+        /
+          <div class="banner">ENTERPRISE BENEFITS<span>We're building an invoice reconiliation network where organizations can exchange and pay invoices in a safe, immutable manner.<br/><br/>With Tallysticks' blockchain core and sophisticated design, customers can significantly increase enterprise-wide operational efficiency.</span></div>
+        %span.icon-one.floating-icon
+        .discover-more-text.text-block-one
+          %h2 AVOID DUPLICATE INVOICES AND DOUBLE PAYMENTS
+          %p Between 0.1% to 0.5% of invoice payments are duplicated either through processing errors or duplicate invoice submissions, but Tallysticks can identify process duplications as well as foster a framework of trust between parties, both, ultimately resulting in reduced error-related costs.
+        %span.icon-two.floating-icon
+        .discover-more-text.text-block-two
+          %h2 GET THE MOST FROM EMPLOYEES BY AUTOMATING LOW-VALUE ACTIVIES
+          %p Switching from paper-based to electronic invoice processing can reduce invoicing costs by 55% to 65%. Tallysticks delivers an additional savings of approximately 25% to 40% over competing electronic invoice reconciliation software platforms.
+        %span.icon-three.floating-icon
+        .discover-more-text.text-block-three
+          %h2 PREVENT EMPLOYEES FROM STEALING
+          %p Estimates indicate that employees defraud or steal between 5% and 20% of revenues from their employers. By leveraging Tallysticks’ smart design features, employees are prevented from manipulating data and stealing.
+        %span.icon-four.floating-icon
+        .discover-more-text.text-block-four
+          %h2 ELIMINATE THE INCENTIVE FOR HACKERS TO STEAL DATA
+          %p Corporations lose approximately 0.8% of revenues as a result of hacked or stolen data. However, Tallysticks’ military-grade data encryption renders stealing sensitive invoice-related payment and other information useless.
+        %span.icon-five.floating-icon
+        .discover-more-text.text-block-five
+          %h2 MEET REGULATORY GUIDELINES AND SIMULTANEOUSLY REDUCE OPERATING COSTS
+          %p More than two-thirds (69%) of internal audit professionals agree that regulation is increasing internal audit costs in their organisation. Employing Tallysticks’ automated invoice reconciliation software, together with immutable recordkeeping, offers companies a cost-effective solution for complying with audit-related regulatory guidelines.
+    %section.group-photo
+      .wrap
+        %h1 Connecting
+        %center
+          %h4 Blockchain is about connecting databases to drive accountability and efficiency.
+          %h4 Contact us to find out about how we're revolutionizing cross-company invoicing and related recordkeeping.
+          %h4
+            Win an iPad by completing this
+            = succeed "." do
+              %a{href: "https://docs.google.com/forms/d/1ZQt5xhWLBvd8lQ5Ve--Bw_NCLNNiJvGdnfb9BwQ9WzE/viewform?usp=send_form"} short questionnaire
+    /
+      <section class="case-studies">
+      <div class="wrap">
+      <h1>CASE STUDIES AND VIDEOS<br>COMING SOON!</h1>
+      </div>
+      </section>
+    /
+      <section class="blockchain">
+      <div class="wrap cf">
+      <h1>BLOCKCHAIN UNDER THE HOOD</h1>
+      <div class="cf flip-cards-wrap">
+      <div class="flip-card active">
+      <div class="front">
+      <a class="various" href="#flip-content1">
+      <h2>WHAT IS BLOCKCHAIN?</h2>
+      <img src="assets/stack.png">
+      </a>
+      </div>
+      <div id="flip-content1" class="back">
+      <h2>WHAT IS BLOCKCHAIN?</h2>
+      <p>Blockchains are stores of immutable historical records.  In fact, the blockchain is considered an excellent technology for credibly recording individual and organisational affairs by a reciprocally convincing process that cannot be refuted by the parties involved in those matters or those permissioned to review them.  As a result, blockchains are ideal for recording transactions or agreements (such as: legal agreements, financial transactions, organisational records, etc…) that may be refuted or queried at a later stage by the parties (themselves), auditors, insurers, investors, regulators, supervisors or even the judiciary/law enforcement.</p>
+      </div>
+      </div>
+      <div class="flip-card active">
+      <div class="front">
+      <a class="various" href="#flip-content2">
+      <h2>WHAT IS A DISTRIBUTED LEDGER?</h2>
+      <img src="assets/db.png">
+      </a>
+      </div>
+      <div id="flip-content2" class="back">
+      <h2>WHAT IS A DISTRIBUTED LEDGER?</h2>
+      Distributed ledgers are publicly shared accounts of all historical blockchain records within a given network.  Because all blockchain records are distributed to all participants in a network, there is a consensus for the records.  Consequently, blockchain records are regarded as immutable since any attempt to alter the records of one ledger would require the simultaneous alteration of all other existing ledgers—a difficult task requiring an inordinately large amount of computing power.  This basic tenet is consensually agreed across the network.
+      </div>
+      </div>
+      <div class="flip-card active">
+      <div class="front">
+      <a class="various" href="#flip-content3">
+      <h2>WHAT ARE SMART CONTRACTS?</h2>
+      <img src="assets/data.png">
+      </a>
+      </div>
+      <div id="flip-content3" class="back">
+      <h2>WHAT ARE SMART CONTRACTS?</h2>
+      <p>Smart contracts are groupings of code and data residing within the blockchain that are distributed across the network. This renders the blockchain a distributed application and database container, and why we see the blockchain as a next generation software system.  Moreover, because of the attributes of the blockchain and smart contracts, Tallysticks can be universally integrated into existing enterprise technology architectures with minimal operational disruption or training.  It is because of these properties that we feel our technology’s architecture design has great potential within and amongst organisations.</p>
+      </div>
+      </div>
+      <div class="flip-card active">
+      <div class="front">
+      <a class="various" href="#flip-content4">
+      <h2>WHAT ARE KEYS?</h2>
+      <img src="assets/key.png">
+      </a>
+      </div>
+      <div id="flip-content4" class="back">
+      <h2>WHAT ARE KEYS?</h2>
+      Each blockchain user in a given network is assigned a private key that has an associated public key known by all other network users.  Every time a given blockchain user performs a task in the network (eg. issues an invoice, pays a bill, delivers a shipment, etc…), the key is used to record those actions on the network’s distributed ledger system.  Yet, even though all network participants have a record of all recorded tasks, not every network participant is able to read each record because all information written on the blockchain is encrypted, with only those permissioned public keys (ie. users with the correct associated private key) able to decipher certain data.  So, a distributed ledger system ensures a consensus of immutable (encrypted) blockchain records and the keys manage the permission of who can read various blocks of information on the ledger.  Consequently, as long as each user securely safeguards its private key, blockchain technology will continue to offer users unrivaled data security.
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+    /
+      <section class="group-photo">
+      <h1>Meet the Tallysticks Team</h1>
+      <div class="team-bio-wrap cf">
+      <div class="team-bio kush cf">
+      <img src="assets/kush.jpg" alt="Kush Patel">
+      <div>
+      <h2>KUSH PATEL (CEO)</h2>
+      <p>Skillful entrepreneur with solid start-up experience. Caught the entrepreneur bug approximately10 years ago, shortly after a successful career on Wall St and as an American diplomat. Outside-the-box thinker with a talent for crafting efficient business strategies. Start-up experience in a range of industries, including: investment management, pharmaceuticals and, now, blockchain technology.</p>
+      </div>
+      </div>
+      <div class="team-bio adi cf">
+      <div>
+      <h2>ADI BEN-ARI (CTO)</h2>
+      <p>Acting CTO, and Co-Founder at Applied Blockchain, Adi is an experienced (20+ years) systems architect, developer and project manager for blue chip companies, including: Vodafone, T-Mobile and Lloyds Banking Group. Co-holder of mobile payments patent. Exceptionally well-versed hands-on blockchain expert, organiser of blockchain hackathons  and sought attendee at various blockchain forums.</p>
+      </div>
+      <img src="assets/adi.jpg" alt="Adi Ben-Ari">
+      </div>
+      </div>
+      </section>
+    %footer
+      .wrap.cf
+        .col-one
+          %h1{style: "text-align:left;"} Contact Us
+          %form#contact{action: "/contact-form/", method: "post", name: "contact", novalidate: "novalidate"}
+            %fieldset
+              %input#FNAME{name: "FNAME", placeholder: "First", required: "", size: "30", type: "text", value: ""}/
+              %input#LNAME{name: "LNAME", placeholder: "Last", required: "", size: "30", type: "text", value: ""}/
+              / <input type="text" name="company" id="company" size="30" value="" required="" placeholder="Company">
+              %input#EMAIL{name: "EMAIL", placeholder: "Email", required: "", size: "30", type: "text", value: ""}/
+              / <input type="text" name="subject" id="subject" size="30" value="" required="" placeholder="Subject">
+              %textarea#MESSAGE{name: "MESSAGE", placeholder: "Message", required: ""}
+              %input#submit{name: "submit", type: "submit", value: "Send"}/
+          #success
+            %span.green.textcenter
+              %p Your message was sent successfully!
+          #error
+            %span
+              %p Something went wrong, try refreshing and submitting the form again.
+        / END COL 1
+      / END WRAP
+  :javascript
+    $(document).ready(function() {
+
+
+    		$('.floating-icon').mouseover(function() {
+    			$(this).next('.discover-more-text').fadeIn(600);
+    		});
+
+    		$('.floating-icon').mouseout(function() {
+    			$(this).next('.discover-more-text').fadeOut(200);
+    		});
+
+    		var maxHeight = -1;
+    		$('.four-boxes ul li').each(function() {
+    			if ($(this).height() > maxHeight)
+            	maxHeight = $(this).height();
+    		});
+
+    		$('.four-boxes ul li').each(function() {
+        		$(this).height(maxHeight);
+    		});
+
+
+    		$(".various").fancybox({
+    		maxWidth	: 800,
+    		maxHeight	: 600,
+    		padding		: 5,
+    		fitToView	: false,
+    		width		: '70%',
+    		height		: 'auto',
+    		autoSize	: false,
+    		closeClick	: false,
+    		openEffect	: 'none',
+    		closeEffect	: 'none'
+    		});
+
+
+            $(function() {
+
+            	$("a[href='#top']").click(function() { $("html, body").animate({ scrollTop: 0 }, "slow"); return false; });
+
+    			/*$('a[href*=#top]:not([href=#])').click(function() {
+        			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          				var target = $(this.hash);
+          				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          				if (target.length) {
+            				$('html,body').animate({
+            					scrollTop: target.offset().top
+            				}, 1000);
+            				return false;
+          				}
+        			}
+      			}); */
+    		});
+
+    	});
+  %script{src: "//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"}
+  %script{src: "//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"}
+  :javascript
+    // validate contact form
+    // $(function() {
+    //     $('#contact').validate({
+    //         rules: {
+    //             FNAME: {
+    //                 required: true
+    //             },
+    //             LNAME: {
+    //                 required: true
+    //             },
+    //             EMAIL: {
+    //                 required: true,
+    //                 email: true
+    //             },
+    //             /*subject: {
+    //                 required: true
+    //             },*/
+    //             MESSAGE: {
+    //                 required: true
+    //             }
+    //         },
+    //         messages: {
+    //             FNAME: {
+    //                 required: "Please enter your first name."
+    //             },
+    //             LNAME: {
+    //                 required: "Please enter your last name."
+    //             },
+    //             EMAIL: {
+    //                 required: "Please enter your email address."
+    //             },
+    //             MESSAGE: {
+    //                 required: "Please enter your messsage."
+    //             }
+    //         },
+    //         submitHandler: function(form) {
+    //             $(form).ajaxSubmit({
+    //                 type:"POST",
+    //                 data: $(form).serialize(),
+    //                 url:"/contact-form/",
+    //                 success: function() {
+    //                     $('#contact :input').attr('disabled', 'disabled');
+    //                     $('#contact').fadeTo( "slow", 0.15, function() {
+    //                         $(this).find(':input').attr('disabled', 'disabled');
+    //                         $(this).find('label').css('cursor','default');
+    //                         $('#success').fadeIn();
+    //                     });
+    //                 },
+    //                 error: function() {
+    //                     $('#contact').fadeTo( "slow", 0.15, function() {
+    //                         $('#error').fadeIn();
+    //                     });
+    //                 }
+    //             });
+    //         }
+    //     });
+    // });
