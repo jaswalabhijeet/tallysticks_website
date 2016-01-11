@@ -2,32 +2,23 @@
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}/
-    %title Tallysticks
+    %title Tallysticks - Invoice Reconciliation on Blockchain
     %meta{content: "Invoice Reconciliation on Blockchain", name: "description"}/
-    %meta{content: "SitePoint", name: "author"}/
+    %meta{content: "Adi Ben-Ari, Francesco 'makevoid' Canessa", name: "author"}/
     %link{href: "styles.css?v=1.0", rel: "stylesheet"}/
     %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", rel: "stylesheet"}/
-    %link{href: "fancybox/jquery.fancybox.css", rel: "stylesheet"}/
-    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
-    %script{src: "fancybox/jquery.fancybox.pack.js"}
-    %script{src: "js/vendor/jquery.flip.min.js"}
+    %link{href: "css/vendor/jquery.fancybox.css", rel: "stylesheet"}/
     %link{href: "https://fonts.googleapis.com/css?family=Lato:400,700", rel: "stylesheet", type: "text/css"}/
-    /[if lt IE 9]
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
   %body#top
     %header
       .wrap.cf
-        %a{href: "index.html"}
+        %a{href: "/"}
           %img.site-logo{src: "assets/logo.png"}/
-        %nav
-          %ul
-            / <li class="home"><a href="#top">Home</a></li>
-            / <li class="api-coming-soon"><a href="#">API Coming Soon</a></li>
     %section.main-hero
       .text-wrap
         MAKING BUSINESS EASIER
-    %section.four-boxes
+    %section.main.four-boxes
       .wrap.cf
         %h2 SOLVING INVOICING CHALLENGES
         %ul
@@ -48,8 +39,6 @@
               %li A secure and private cost-effective Blockchain-based software solution that facilitates invoice payments and automates invoice reconciliation in a timely manner which ultimately increases profitability.
               %br/
               %li An immutable recordkeeping framework that establishes a trusted practice, amongst transaction participants as well as permissioned third-parties, for recording when, how and if invoice issuances, payments and reconciliations were performed.
-        /
-          <div class="banner">ENTERPRISE BENEFITS<span>We're building an invoice reconiliation network where organizations can exchange and pay invoices in a safe, immutable manner.<br/><br/>With Tallysticks' blockchain core and sophisticated design, customers can significantly increase enterprise-wide operational efficiency.</span></div>
         %span.icon-one.floating-icon
         .discover-more-text.text-block-one
           %h2 AVOID DUPLICATE INVOICES AND DOUBLE PAYMENTS
@@ -81,68 +70,6 @@
             = succeed "." do
               %a{href: "https://docs.google.com/forms/d/1ZQt5xhWLBvd8lQ5Ve--Bw_NCLNNiJvGdnfb9BwQ9WzE/viewform?usp=send_form"} short questionnaire
     /
-      <section class="case-studies">
-      <div class="wrap">
-      <h1>CASE STUDIES AND VIDEOS<br>COMING SOON!</h1>
-      </div>
-      </section>
-    /
-      <section class="blockchain">
-      <div class="wrap cf">
-      <h1>BLOCKCHAIN UNDER THE HOOD</h1>
-      <div class="cf flip-cards-wrap">
-      <div class="flip-card active">
-      <div class="front">
-      <a class="various" href="#flip-content1">
-      <h2>WHAT IS BLOCKCHAIN?</h2>
-      <img src="assets/stack.png">
-      </a>
-      </div>
-      <div id="flip-content1" class="back">
-      <h2>WHAT IS BLOCKCHAIN?</h2>
-      <p>Blockchains are stores of immutable historical records.  In fact, the blockchain is considered an excellent technology for credibly recording individual and organisational affairs by a reciprocally convincing process that cannot be refuted by the parties involved in those matters or those permissioned to review them.  As a result, blockchains are ideal for recording transactions or agreements (such as: legal agreements, financial transactions, organisational records, etc…) that may be refuted or queried at a later stage by the parties (themselves), auditors, insurers, investors, regulators, supervisors or even the judiciary/law enforcement.</p>
-      </div>
-      </div>
-      <div class="flip-card active">
-      <div class="front">
-      <a class="various" href="#flip-content2">
-      <h2>WHAT IS A DISTRIBUTED LEDGER?</h2>
-      <img src="assets/db.png">
-      </a>
-      </div>
-      <div id="flip-content2" class="back">
-      <h2>WHAT IS A DISTRIBUTED LEDGER?</h2>
-      Distributed ledgers are publicly shared accounts of all historical blockchain records within a given network.  Because all blockchain records are distributed to all participants in a network, there is a consensus for the records.  Consequently, blockchain records are regarded as immutable since any attempt to alter the records of one ledger would require the simultaneous alteration of all other existing ledgers—a difficult task requiring an inordinately large amount of computing power.  This basic tenet is consensually agreed across the network.
-      </div>
-      </div>
-      <div class="flip-card active">
-      <div class="front">
-      <a class="various" href="#flip-content3">
-      <h2>WHAT ARE SMART CONTRACTS?</h2>
-      <img src="assets/data.png">
-      </a>
-      </div>
-      <div id="flip-content3" class="back">
-      <h2>WHAT ARE SMART CONTRACTS?</h2>
-      <p>Smart contracts are groupings of code and data residing within the blockchain that are distributed across the network. This renders the blockchain a distributed application and database container, and why we see the blockchain as a next generation software system.  Moreover, because of the attributes of the blockchain and smart contracts, Tallysticks can be universally integrated into existing enterprise technology architectures with minimal operational disruption or training.  It is because of these properties that we feel our technology’s architecture design has great potential within and amongst organisations.</p>
-      </div>
-      </div>
-      <div class="flip-card active">
-      <div class="front">
-      <a class="various" href="#flip-content4">
-      <h2>WHAT ARE KEYS?</h2>
-      <img src="assets/key.png">
-      </a>
-      </div>
-      <div id="flip-content4" class="back">
-      <h2>WHAT ARE KEYS?</h2>
-      Each blockchain user in a given network is assigned a private key that has an associated public key known by all other network users.  Every time a given blockchain user performs a task in the network (eg. issues an invoice, pays a bill, delivers a shipment, etc…), the key is used to record those actions on the network’s distributed ledger system.  Yet, even though all network participants have a record of all recorded tasks, not every network participant is able to read each record because all information written on the blockchain is encrypted, with only those permissioned public keys (ie. users with the correct associated private key) able to decipher certain data.  So, a distributed ledger system ensures a consensus of immutable (encrypted) blockchain records and the keys manage the permission of who can read various blocks of information on the ledger.  Consequently, as long as each user securely safeguards its private key, blockchain technology will continue to offer users unrivaled data security.
-      </div>
-      </div>
-      </div>
-      </div>
-      </section>
-    /
       <section class="group-photo">
       <h1>Meet the Tallysticks Team</h1>
       <div class="team-bio-wrap cf">
@@ -166,15 +93,13 @@
       .wrap.cf
         .col-one
           %h1{style: "text-align:left;"} Contact Us
-          %form#contact{action: "/contact-form/", method: "post", name: "contact", novalidate: "novalidate"}
+          %form#contact{method: "post"}
             %fieldset
-              %input#FNAME{name: "FNAME", placeholder: "First", required: "", size: "30", type: "text", value: ""}/
-              %input#LNAME{name: "LNAME", placeholder: "Last", required: "", size: "30", type: "text", value: ""}/
-              / <input type="text" name="company" id="company" size="30" value="" required="" placeholder="Company">
-              %input#EMAIL{name: "EMAIL", placeholder: "Email", required: "", size: "30", type: "text", value: ""}/
-              / <input type="text" name="subject" id="subject" size="30" value="" required="" placeholder="Subject">
-              %textarea#MESSAGE{name: "MESSAGE", placeholder: "Message", required: ""}
-              %input#submit{name: "submit", type: "submit", value: "Send"}/
+              %input#FNAME{name: "first", placeholder: "First", size: "30", type: "text", value: ""}/
+              %input#LNAME{name: "last", placeholder: "Last", size: "30", type: "text", value: ""}/
+              %input#EMAIL{name: "email", placeholder: "Email", required: true, size: "30", type: "text", value: ""}/
+              %textarea#MESSAGE{name: "message", placeholder: "Message"}
+              %input#submit{type: "submit", value: "Send"}/
           #success
             %span.green.textcenter
               %p Your message was sent successfully!
@@ -183,119 +108,14 @@
               %p Something went wrong, try refreshing and submitting the form again.
         / END COL 1
       / END WRAP
-  :javascript
-    $(document).ready(function() {
 
-
-    		$('.floating-icon').mouseover(function() {
-    			$(this).next('.discover-more-text').fadeIn(600);
-    		});
-
-    		$('.floating-icon').mouseout(function() {
-    			$(this).next('.discover-more-text').fadeOut(200);
-    		});
-
-    		var maxHeight = -1;
-    		$('.four-boxes ul li').each(function() {
-    			if ($(this).height() > maxHeight)
-            	maxHeight = $(this).height();
-    		});
-
-    		$('.four-boxes ul li').each(function() {
-        		$(this).height(maxHeight);
-    		});
-
-
-    		$(".various").fancybox({
-    		maxWidth	: 800,
-    		maxHeight	: 600,
-    		padding		: 5,
-    		fitToView	: false,
-    		width		: '70%',
-    		height		: 'auto',
-    		autoSize	: false,
-    		closeClick	: false,
-    		openEffect	: 'none',
-    		closeEffect	: 'none'
-    		});
-
-
-            $(function() {
-
-            	$("a[href='#top']").click(function() { $("html, body").animate({ scrollTop: 0 }, "slow"); return false; });
-
-    			/*$('a[href*=#top]:not([href=#])').click(function() {
-        			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          				var target = $(this.hash);
-          				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          				if (target.length) {
-            				$('html,body').animate({
-            					scrollTop: target.offset().top
-            				}, 1000);
-            				return false;
-          				}
-        			}
-      			}); */
-    		});
-
-    	});
-  %script{src: "//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"}
-  %script{src: "//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"}
-  :javascript
-    // validate contact form
-    // $(function() {
-    //     $('#contact').validate({
-    //         rules: {
-    //             FNAME: {
-    //                 required: true
-    //             },
-    //             LNAME: {
-    //                 required: true
-    //             },
-    //             EMAIL: {
-    //                 required: true,
-    //                 email: true
-    //             },
-    //             /*subject: {
-    //                 required: true
-    //             },*/
-    //             MESSAGE: {
-    //                 required: true
-    //             }
-    //         },
-    //         messages: {
-    //             FNAME: {
-    //                 required: "Please enter your first name."
-    //             },
-    //             LNAME: {
-    //                 required: "Please enter your last name."
-    //             },
-    //             EMAIL: {
-    //                 required: "Please enter your email address."
-    //             },
-    //             MESSAGE: {
-    //                 required: "Please enter your messsage."
-    //             }
-    //         },
-    //         submitHandler: function(form) {
-    //             $(form).ajaxSubmit({
-    //                 type:"POST",
-    //                 data: $(form).serialize(),
-    //                 url:"/contact-form/",
-    //                 success: function() {
-    //                     $('#contact :input').attr('disabled', 'disabled');
-    //                     $('#contact').fadeTo( "slow", 0.15, function() {
-    //                         $(this).find(':input').attr('disabled', 'disabled');
-    //                         $(this).find('label').css('cursor','default');
-    //                         $('#success').fadeIn();
-    //                     });
-    //                 },
-    //                 error: function() {
-    //                     $('#contact').fadeTo( "slow", 0.15, function() {
-    //                         $('#error').fadeIn();
-    //                     });
-    //                 }
-    //             });
-    //         }
-    //     });
-    // });
+  %script{src: "js/vendor/jquery.js"}
+  %script{src: "js/vendor/jquery.fancybox.js"}
+  %script{src: "js/vendor/jquery.flip.min.js"}
+  %script{src: "js/vendor/underscore.js"}
+  /[if lt IE 9]
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  -# %script{src: "http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"}
+  -# %script{src: "http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"}
+  %script{src: "js/ui.js"}
+  %script{src: "js/app.js"}

@@ -471,9 +471,9 @@ nav ul li.api-coming-soon {
 	height: 60px;
 	width: 60px;
 	display: block;
-	-webkit-animation: pulsate 1.2s ease-in-out infinite;
-	-o-animation: pulsate 1.2s ease-in-out infinite;
-	animation: pulsate 1.2s ease-in-out infinite;
+	-webkit-animation: pulsate 2s ease-in-out infinite;
+	-o-animation: pulsate 2s ease-in-out infinite;
+	animation: pulsate 2s ease-in-out infinite;
 	z-index: 10000;
 }
 
@@ -1106,4 +1106,9 @@ div.fancybox-inner .back {
 		font-size: 30px;
 	}
 
+}
+
+
+.main ul li {
+	height: 186px;
 }
