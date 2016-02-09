@@ -1,0 +1,229 @@
+<div class="object ui-draggable selected" style="opacity: 1; width: 448px; height: 221px; position: absolute; left: 822px; top: 5592px; border-style: none; border-color: rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0);">
+
+<form id="contact" method="post">
+  <fieldset>
+    <input name="first" placeholder="First" size="30" type="text" value="">
+    <input name="last" placeholder="Last" size="30" type="text" value="">
+    <input name="email" placeholder="Email" required="" size="30" type="text" value="">
+    <textarea name="message" placeholder="Company and Message"></textarea>
+  </fieldset>
+  <div class="submit">
+    <input type="submit" value="Send">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="message f-left"></div>
+  </div>
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script type="text/javascript">
+
+
+(function() {
+  var bappHost, c, contractName, formElem, getParam, info, mailHost, mailUrl, methodPost, postJSON, setLoaded, setLoading, spinner, submit;
+
+  bappHost = "bapp.ab.mkvd.net";
+
+  mailHost = document.location.hostname === "localhost" ? "localhost:3001" : "mail_tally.ab.mkvd.net";
+
+  contractName = 'contact_form';
+
+  c = console || {
+    log: function() {}
+  };
+
+  mailUrl = "http://" + mailHost + "/mail";
+
+  methodPost = function(name) {
+    var host;
+    host = "http://" + bappHost;
+    return host + "/api/" + contractName + "/" + name;
+  };
+
+  postJSON = function(url, params, callback) {
+    return $.post(url, params, callback, 'json');
+  };
+
+  formElem = $("form#contact");
+
+  getParam = function(param, params) {
+    var par;
+    par = _(params).find(function(p) {
+      return p.name === param;
+    });
+    return par.value;
+  };
+
+  spinner = $(".spinner");
+
+  info = $(".message");
+
+  submit = $("form#contact input[type='submit']");
+
+  setLoading = function() {
+    submit.attr("disabled", true);
+    spinner.css({
+      visibility: "visible"
+    });
+    return info.html("loading...");
+  };
+
+  setLoaded = function(contract_address) {
+    spinner.css({
+      visibility: "hidden"
+    });
+    return info.html("We have received your message and we'll contact you shortly.");
+  };
+
+  formElem.on("submit", function(evt) {
+    var body, email, firstName, lastName, mailArgs, message, params, values;
+    evt.preventDefault();
+    setLoading();
+    params = formElem.serializeArray();
+    email = getParam("email", params);
+    firstName = getParam("first", params);
+    lastName = getParam("last", params);
+    message = getParam("message", params);
+    message = message.split("\n").join("<br>");
+    body = message;
+    values = {
+      values: [email, firstName, lastName],
+      types: ["bytes32", "bytes32", "bytes32"]
+    };
+    if (email) {
+      c.log("addContact(" + (values.values.join(", ")) + ") called!");
+      mailArgs = {
+        from_name: firstName + " " + lastName + " <" + email + ">",
+        from_address: email,
+        body: body
+      };
+      postJSON(mailUrl, mailArgs, function(resp) {
+        if (resp.success) {
+          c.log("Email sent!");
+          return setLoaded();
+        }
+      });
+      return postJSON(methodPost("addContact"), values, function(resp) {
+        c.log("addContact() //=> '" + (JSON.stringify(resp)) + "'");
+        if (resp.success) {
+          return c.log("Success!!");
+        }
+      });
+    }
+  });
+
+}).call(this);
+
+  </script>
+
+
+
+<style type="text/css">
+
+/* contact form CSS, these are related to the current theme */
+form#contact {
+  position: absolute;
+  z-index: 1;
+}
+
+form#contact input[type='submit'] {
+  width: 120px;
+  background: rgb(40, 70, 112);
+  color: white;
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border: 0;
+}
+form#contact input, form#contact textarea {
+  width: 100%;
+  padding: 6px 0;
+  margin-bottom: 10px;
+  font-size: 19px;
+  text-align: center;
+  }
+
+form#contact .message {
+	display: block;
+}
+
+/* contact form CSS, disables the button, this should be ok */
+
+form#contact input[type='submit']:disabled {
+	opacity: 0.7;
+}
+
+.message.f-left {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Spinner */
+
+.spinner {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  float: left;
+  /* extra */
+  margin-left: 30px;
+  visibility: hidden;
+}
+
+.spinner > div {
+  background-color: #1f8dd6;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+</style>
+
+
+</div>
